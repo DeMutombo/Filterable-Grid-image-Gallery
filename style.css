@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+body {
+    font-family: poppins, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-header ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.gallery-header ul li {
+    color: #fff;
+    margin-top: 5px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    background-color: #0f6efd;
+}
+
+.gallery-header ul li:hover {
+    color: #fff;
+    margin-left: 2rem;
+    padding: 5px 12px;
+    cursor: pointer;
+    background-color: #2f538a;
+    transition: all 0.6s ease-in-out;
+}
+
+.grid-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    padding: 1rem;
+}
+
+.inner img {
+    width: 100%;
+    display: block;
+}
