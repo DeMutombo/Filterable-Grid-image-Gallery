@@ -10,16 +10,18 @@
 
 body {
     font-family: poppins, sans-serif;
+    height: 100vh;
+    background-color: #212121;
 }
 
 .container {
-    width: 1200px;
+    width: 85%;
     margin: auto;
 }
 
 .grid-gallery {
     display: grid;
-    grid-template-columns: 0.4fr 1fr;
+    grid-template-columns: 0.5fr 2fr;
     grid-gap: 15px;
     margin-top: 20px;
 }
@@ -29,17 +31,22 @@ body {
     flex-direction: column;
 }
 
+.gallery-header h1 {
+    color: #fff;
+}
+
 .gallery-header ul {
     list-style: none;
     margin-top: 15px;
 }
 
 .gallery-header ul li {
-    color: #fff;
+    color: rgb(56, 34, 34);
+    font-weight: 600;
     margin-top: 5px;
     padding: 5px 12px;
     border-radius: 3px;
-    background-color: #0f6efd;
+    background-color: #abf5fa;
 }
 
 .gallery-header ul li:hover {
@@ -47,8 +54,19 @@ body {
     margin-left: 2rem;
     padding: 5px 12px;
     cursor: pointer;
-    background-color: #2f538a;
+    background-color: #556b6d;
     transition: all 0.6s ease-in-out;
+}
+
+.gallery-header ul li.active {
+    color: #fff;
+    margin-left: 2rem;
+    background-color: #556b6d;
+}
+
+.inner img {
+    width: 100%;
+    display: block;
 }
 
 .grid-image {
@@ -57,9 +75,4 @@ body {
     grid-gap: 10px;
     grid-auto-flow: dense;
     padding: 1rem;
-}
-
-.inner img {
-    width: 100%;
-    display: block;
 }
